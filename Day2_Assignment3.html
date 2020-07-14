@@ -1,0 +1,37 @@
+<!--
+     Write a javascript program to get the current date.
+Expected output:
+mm-dd-yyyy, mm/dd/yyyy or
+dd-mm-yyyy, dd/mm/yyyy
+-->
+
+<html> 
+<head> 
+    <title>getting current date</title> 
+    <h2>Lets Upgrade Day2-Assignment3</h2>
+</head> 
+  
+<body> 
+    <b>  Get current date in JavaScript? </b> 
+    <p> 
+        Current Date is: <span class="output"></span> 
+    </p> 
+  
+    <button onclick="getCurrentDate()"> Get current Date </button> 
+      
+    <script type="text/javascript"> 
+        function getCurrentDate()
+        { 
+            let dateObj = new Date(); 
+            let month = String(dateObj.getMonth() + 1).padStart(2, '0'); 
+            let day = String(dateObj.getDate()).padStart(2, '0'); 
+            let year = dateObj.getFullYear(); 
+            let output = day + '-' + month + '-' + year +" "+ day + '/' + month + '/' + year; 
+             
+  
+            document.querySelector('.output').textContent = output; 
+        } 
+    </script> 
+</body> 
+  
+</html>       
